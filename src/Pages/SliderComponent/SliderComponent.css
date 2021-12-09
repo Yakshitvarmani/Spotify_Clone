@@ -1,0 +1,188 @@
+#slider-block {
+  background: rgb(150, 240, 182);
+}
+#slider-block article {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  height: 100%;
+  /* align-items: center; */
+  min-height: 630px;
+}
+#slider-block article .sliderLeft {
+  flex-basis: 60%;
+}
+#slider-block article .sliderRight {
+  flex-basis: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sliderLeft {
+  color: rgb(32, 47, 114);
+  margin: 80px 0;
+}
+.sliderLeft h4 {
+  padding-bottom: 50px;
+  font-size: 14px;
+}
+.sliderLeft h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+p.enjoy {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 50px;
+  letter-spacing: 1.3px;
+}
+.sliderLeft button {
+  padding: 17px 48px;
+  border-radius: 500px;
+  border: none;
+  background: rgb(32, 47, 114) !important;
+  color: rgb(150, 240, 182);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.copyWrite {
+  font-size: 13px;
+}
+.sliderRight img {
+  width: 400px;
+  height: 400px;
+}
+
+/* jkauha */
+#stnblk {
+  background: #f46ebe;
+}
+#stnblk article {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  height: 606px;
+}
+#stnblk article .leftttt {
+  flex-basis: 45%;
+}
+#stnblk article .Slider2Right {
+  flex-basis: 55%;
+}
+.leftttt {
+  color: #202f72;
+  margin: 80px 0;
+  padding-left: 50px;
+}
+.leftttt h4 {
+  font-size: 14px;
+  padding-bottom: 50px;
+}
+.leftttt h1 {
+  font-size: 66px;
+  font-weight: 900;
+  padding-bottom: 52px;
+}
+.available {
+  padding-bottom: 50px;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.Slider2Right {
+  background-image: url("https://www-growth.scdn.co/static/home/wrapped-homepage-banner-graphic-desktop.svg");
+  background-position: right -1080px bottom -425px;
+}
+.storeapple {
+  width: 155px;
+  height: 60px;
+}
+.store {
+  display: flex;
+  padding-bottom: 45px;
+}
+#blockkk {
+  background: #2941ab;
+  color: #1ed760;
+  background-image: url("https://content-tooling.spotifycdn.com/images/b236bf87-bfd5-4bcb-b51a-77881073039c_lie_circles.svg");
+  background-position: center center;
+  background-size: auto 106%;
+  background-repeat: no-repeat;
+  min-width: 768px;
+}
+#blockkk article {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  height: 606px;
+}
+.slider3Left h1 {
+  font-size: 60px;
+  font-weight: 900;
+  padding-bottom: 48px;
+}
+.Millions {
+  font-size: 24px;
+  line-height: 39px;
+  padding-bottom: 74px;
+}
+.slider3Left button {
+  height: 49px;
+  background: #1ed760;
+  width: 252px;
+  border: none;
+  border-radius: 500px;
+  color: #2941ab;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.circles {
+  background-image: url("https://content-tooling.spotifycdn.com/images/b236bf87-bfd5-4bcb-b51a-77881073039c_lie_circles.svg");
+}
+#footerBlock {
+  background: #000;
+  color: white;
+  height: 530px;
+}
+#footerBlock article {
+  padding: 80px 50px;
+  display: flex;
+}
+.spotifyLogo svg {
+  margin-left: 120px;
+}
+.spotifyLogo {
+  flex-basis: 25%;
+}
+.company ul li {
+  list-style: none;
+  flex-basis: 30%;
+  padding: 8px;
+  font-size: 16px;
+}
+.company ul li:hover {
+  color: #1ed760;
+}
+.communities ul li {
+  list-style: none;
+  flex-basis: 15%;
+  padding: 8px;
+}
+.communities ul li:hover {
+  color: #1ed760;
+}
+.useful ul li {
+  list-style: none;
+  flex-basis: 20%;
+  padding: 8px;
+}
+.useful ul li:hover {
+  color: #1ed760;
+}
+.socialMedia {
+  flex-basis: 30%;
+}
