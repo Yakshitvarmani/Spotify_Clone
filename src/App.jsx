@@ -1,53 +1,75 @@
-import React, { useContext } from "react";
-import { AuthContextApi } from "./Apis/AuthContext";
+import React, { Fragment, useContext } from "react";
+import Navbar from "./Pages/HeaderComponent/Navbar";
+// import Slider from "./Pages/SliderComponent/Slider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import Home from "./Pages/Home";
+import Login from "./Components/AuthComponent/Login";
+import Signup from "./Components/AuthComponent/Signup";
+import PageNotFound from "./Pages/PageNotFound";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Login from "./Component/AuthComponent/Login";
-import SignUp from "./Component/AuthComponent/SignUp";
-import NavBar from "./Pages/HeaderComponent/NavBar";
-import Home from "./Pages/Home";
-import PageNotFound from "./Pages/PageNotFound";
-// import { Fragment } from "react/cjs/react.production.min";
-import UserHome from "./UserComponents/UserHome";
+import { AuthContextApi } from "./Apis/AuthContext";
+import UserHome from "./UsersComponent/UserHome";
 
 const App = () => {
-  let USER = useContext(AuthContextApi);
+  let state = useContext(AuthContextApi);
+  // let IsAnonymousTemplate = () => {
   return (
-    <section id="spotifyMainBlock">
+    <section id="SpotifyMainBlock">
       <article>
         <Router>
-          <header>{!USER ? <NavBar /> : ""}</header>
+          {/* {auth === true ? (
+            <header>
+              <Navbar />
+            </header>
+          ) : (
+            ""
+          )} */}
+          <header>{state ? <Navbar /> : ""}</header>
           <ToastContainer />
           <main>
-            {/* Dynamic Starts Here */}
+            {/* dynamic routing starts here */}
+
             <Switch>
               <Route path="/" exact>
                 <Home />
               </Route>
 
-              <Route path="/signup" exact>
-                <SignUp />
-              </Route>
-              <Route path="/userHome">
-                <UserHome />
-              </Route>
-
-              <Route path="/login" exact>
+              <Route path="/login">
                 <Login />
               </Route>
 
-              <Route path="*">
+              <Route path="/signup">
+                <Signup />
+              </Route>
+
+              {/* user routing satrt here */}
+              <Route path="/UserHome">
+                <UserHome />
+              </Route>
+
+              <Route path="/">
                 <PageNotFound />
               </Route>
             </Switch>
-            {/* Dynamic Ends Here */}
+
+            {/* dynamic routing ends here */}
           </main>
         </Router>
       </article>
     </section>
   );
+  // };
+
+  // let IsAuthenticatedTemplate = () => {
+  //   return <UserHome />;
+  // };
+  // return (
+  //   <Fragment>
+  //     {state === null ? <IsAnonymousTemplate /> : <IsAuthenticatedTemplate />}
+  //   </Fragment>
+  // );
 };
 
 export default App;

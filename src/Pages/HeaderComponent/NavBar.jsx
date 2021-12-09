@@ -1,9 +1,8 @@
 import React from "react";
-import HeaderMenu from "./HeaderMenu";
 import Logo from "./Logo";
+import HeaderMenu from "./HeaderMenu";
 import "./HeaderComponent.css";
-
-const NavBar = () => {
+const Navbar = () => {
   return (
     <header id="spotify-headerBlock">
       <nav>
@@ -18,4 +17,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

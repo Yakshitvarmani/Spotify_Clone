@@ -1,0 +1,282 @@
+#authBlock article {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 30px 0;
+  flex-direction: column;
+}
+
+#authBlock article svg {
+  fill: #111;
+  width: 150px;
+}
+
+#authBlock article h1 {
+  font-size: 27px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.authContent {
+  text-align: center;
+}
+
+.authContent button {
+  background: #3085f3;
+  padding: 14px 32px;
+  border-radius: 500px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.orBlock {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  width: 80%;
+  margin: 12px auto;
+  position: relative;
+}
+
+.orBlock strong {
+  top: 0px;
+  padding: 10px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  left: 44%;
+  z-index: 11111;
+  background: #fff;
+  color: #999;
+  text-transform: lowercase;
+}
+
+.formContent {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.formContent h2 {
+  font-size: 17px;
+  text-align: center;
+  padding: 20px 0;
+  color: #000;
+}
+
+.formContent label {
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.formContent input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #999;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.dateBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dateBlock input:nth-child(1) {
+  flex-basis: 40%;
+}
+
+.dateBlock input:nth-child(2) {
+  flex-basis: 20%;
+}
+
+.dateBlock input:nth-child(3) {
+  flex-basis: 30%;
+}
+
+.genderBlock {
+  display: flex;
+  padding: 10px 0;
+}
+
+.genderBlock span {
+  padding: 0 20px 20px 0;
+}
+
+.genderBlock span input {
+  margin-right: 7px;
+}
+
+#cb {
+  display: inline-block;
+  margin-right: 7px;
+}
+.checkBoxContent {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.copyWriteText {
+  font-size: 13px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 16px;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+.btn-group button {
+  background: #1ed760;
+  padding: 20px 56px;
+  border-radius: 500px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.acc {
+  text-align: center;
+  margin-top: 22px;
+  font-weight: bold;
+}
+
+/* login form */
+
+#loginBlock article {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 30px 0;
+  flex-direction: column;
+}
+
+#loginBlock article svg {
+  fill: #111;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* .loginContent {
+  width: 100%;
+  margin-top: 20px;
+} */
+#loginBlock article > p {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.651);
+  width: 100%;
+  margin-bottom: 20px;
+}
+#loginBlock h1 {
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* .loginContent div button {
+  display: block;
+  width: 100%;
+  /* width: 200px; */
+/* }  */
+
+.loginContent div button:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  border-radius: 500px;
+  border: none;
+  background-color: #3b5a9b;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.loginContent div button:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  border-radius: 500px;
+  border: none;
+  background-color: #000000;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.loginContent div button:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  border-radius: 500px;
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 2px solid gray;
+}
+
+.loginContent div button:nth-child(3):hover {
+  background-color: gray;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.loginContent div button:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  border-radius: 500px;
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 2px solid gray;
+}
+
+.loginContent div button:nth-child(4):hover {
+  background-color: gray;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.loginContent div button span i {
+  /* padding: 0 10px 0 0; */
+  color: white;
+  margin-right: 10px;
+}

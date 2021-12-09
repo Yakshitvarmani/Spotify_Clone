@@ -1,0 +1,61 @@
+#profileBlock {
+  width: 100%;
+}
+#profileBlock header {
+  height: 30vh;
+  max-height: 500px;
+  min-height: 340px;
+  width: 100%;
+  background: #5a5a5a40;
+  display: flex;
+  align-items: center;
+}
+
+#profileBlock header figure {
+  flex-basis: 25%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#profileBlock header figure img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+#profileBlock header aside {
+  flex-basis: 75%;
+}
+
+#profileBlock header aside h5 {
+  font-size: 17px;
+  color: #fff;
+  padding: 20px 0;
+}
+
+#profileBlock header aside h1 {
+  font-size: 6em;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 900;
+}
+
+#profileBlock header figure:hover ._editIcon {
+  filter: drop-shadow(2px 4px 6px black);
+  display: block;
+}
+
+._editIcon {
+  position: absolute;
+  display: none;
+  color: #fff;
+}
+
+._editIcon i {
+  display: block;
+  font-size: 35px;
+  text-align: center;
+  margin: 20px 0;
+}

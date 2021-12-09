@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
     <Fragment>
-      <a href="">
+      <a href="/">
         <svg
           viewBox="0 0 63 20"
           xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,118 @@
+#userBlock {
+  height: 100vh;
+}
+
+#userBlock article {
+  display: flex;
+  height: 100vh;
+}
+
+.userLeftBlock {
+  flex-basis: 15%;
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.userRightBlock {
+  display: flex;
+  flex-basis: 85%;
+  background-color: #121212;
+  color: #fff;
+}
+
+.userLeftBlock svg {
+  fill: #fff;
+  width: 130px;
+  height: 60px;
+  margin: 22px 0 0 22px;
+}
+
+.userli ul li {
+  list-style: none;
+  margin: 15px 0 0 24px;
+  font-size: 14px;
+}
+
+/* .userli ul li:hover {
+  background-color: #282828;
+  height: 40px;
+  width: 80%;
+  padding: 10px 0px;
+} */
+
+/* .userli ul li:nth-child(1) {
+  background-color: #1d1d1d;
+  width: 80%;
+  padding: 10px 0px;
+  border-radius: 4px;
+} */
+
+.userli ul li a {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+.userli ul li a:hover {
+  color: #fff;
+}
+
+.userli ul li a i {
+  padding: 0 20px 0 0;
+  font-size: 24px;
+}
+
+.userli2 ul {
+  margin-top: 40px;
+}
+.userli2 ul li {
+  list-style: none;
+  margin: 15px 0 0 24px;
+  font-size: 14px;
+}
+
+.userli2 ul li a {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+.userli2 ul li a:hover {
+  color: #fff;
+}
+
+.userli2 ul li a i {
+  padding: 0 20px 0 0;
+  font-size: 24px;
+}
+
+.userli2 p {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+  width: 80%;
+  margin: 20px auto;
+}
+
+.myplay p {
+  margin: -8px 0 0 24px;
+  font-size: 14px;
+  color: #a9a9a9;
+}
+
+.myplay p:hover {
+  color: #fff;
+}
+.install p {
+  /* margin-top: 200px; */
+  margin: 200px 0 0 24px;
+  font-size: 14px;
+  color: #a9a9a9;
+}
+
+.install p:hover {
+  color: #fff;
+}
+.install p i {
+  padding-right: 20px;
+  font-size: 2 0px;
+}

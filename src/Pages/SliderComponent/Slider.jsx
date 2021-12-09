@@ -1,6 +1,5 @@
 import React from "react";
-import "./SliderComponent.css";
-
+import "./SliderComp.css";
 const Slider = () => {
   return (
     <section id="slider-block">
@@ -9,10 +8,10 @@ const Slider = () => {
           <h4>SPOTIFY PREMIUM</h4>
           <h1>Get 3 months of Premium for free</h1>
           <p className="enjoy">
-            Enjoy ad-free music listening, offline playback, and more. Cancel
-            anytime.
+            Enjoy ad-free music listening, offline playback, and more.
+            <br /> Cancel anytime.
           </p>
-          <button>Get 3 Months Free</button>
+          <button>GET 3 MONTHS FREE</button>
           <p className="copyWrite">
             Individual plan only. $9.99/month after. Terms and conditions apply.
             Open only to users who haven't already tried Premium. Offer ends 31
@@ -21,7 +20,7 @@ const Slider = () => {
         </div>
         <div className="sliderRight">
           <figure>
-            <img src="piano.png" alt="slider" />
+            <img src="slider1.png" alt="image"/>
           </figure>
         </div>
       </article>

@@ -1,12 +1,12 @@
 import React from "react";
-import { render } from "react-dom";
+import ReactDOM from "react-dom";
 import AuthProvider from "./Apis/AuthContext";
 import App from "./App";
-import "./Global.css";
+import "./SpotifyGlobal.css";
 
-render(
+ReactDOM.render(
   <AuthProvider>
     <App />
   </AuthProvider>,
-  document.querySelector("#root")
+  document.getElementById("root")
 );

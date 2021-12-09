@@ -1,0 +1,43 @@
+#footerBlock {
+  background: #000;
+  color: white;
+  height: 530px;
+}
+#footerBlock article {
+  padding: 80px 50px;
+  display: flex;
+}
+.spotifyLogo svg {
+  margin-left: 120px;
+}
+.spotifyLogo {
+  flex-basis: 25%;
+}
+.company ul li {
+  list-style: none;
+  flex-basis: 30%;
+  padding: 8px;
+  font-size: 16px;
+}
+.company ul li:hover {
+  color: #1ed760;
+}
+.communities ul li {
+  list-style: none;
+  flex-basis: 15%;
+  padding: 8px;
+}
+.communities ul li:hover {
+  color: #1ed760;
+}
+.useful ul li {
+  list-style: none;
+  flex-basis: 20%;
+  padding: 8px;
+}
+.useful ul li:hover {
+  color: #1ed760;
+}
+.socialMedia {
+  flex-basis: 30%;
+}
