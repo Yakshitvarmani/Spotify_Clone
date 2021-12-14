@@ -1,8 +1,25 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import Logo from "../../Pages/HeaderComponent/Logo";
 import LoginForm from "./LoginForm";
+import socialLogin, {
+  FacebookProcider,
+  GoogleProvider,
+} from "./LoginWithSocialMedia";
+import { Link } from "react-router-dom";
 
 const Login = () => {
+  let history = useHistory();
+  let handleClick = async provider => {
+    try {
+      await socialLogin(provider);
+      toast.success("Successfully loggedin");
+      history.push("/userHome/profile");
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
   return (
     <section id="loginBlock">
       <article>
@@ -11,7 +28,7 @@ const Login = () => {
         <h1>To continue, log in to Spotify.</h1>
         <div className="loginContent">
           <div>
-            <button>
+            <button onClick={() => handleClick(FacebookProcider)}>
               <span>
                 <i class="fab fa-facebook"></i>Continue with facebook
               </span>
@@ -21,8 +38,10 @@ const Login = () => {
                 <i class="fab fa-apple"></i>Continue with apple
               </span>
             </button>
-            <button>Continue with google</button>
-            <button>Continue with Phone Number</button>
+            <button onClick={() => handleClick(GoogleProvider)}>
+              Continue with google
+            </button>
+            <Link to="/phone-auth">Continue with Phone Number</Link>
           </div>
 
           <p className="orBlock">
@@ -33,17 +52,10 @@ const Login = () => {
         <section id="authBlock">
           <article>
             {/* <Logo /> */}
-            <div className="authContent">
-              {/* <h1>Sign up for free to start listening</h1>
-              <button>Sign up with Facebook</button>
-              <p className="orBlock">
-                <strong>or</strong>
-              </p>
-              <p className="signEmail">Sign up with your email address</p> */}
-            </div>
+            <div className="authContent"></div>
 
             <div className="formContent">
-             <LoginForm/>
+              <LoginForm />
             </div>
           </article>
         </section>

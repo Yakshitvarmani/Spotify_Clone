@@ -28,10 +28,14 @@ const UserLeftBlock = () => {
       <div className="userli2">
         <ul>
           <li>
-            <a href=""><i class="fal fa-plus-square"></i>Create Playlist</a>
+            <Link to="/userHome/create-play-list">
+              <i class="fal fa-plus-square"></i>Create Playlist
+            </Link>
           </li>
           <li>
-            <a href=""><i class="fas fa-heart-square"></i>Liked Songs</a>
+            <a href="">
+              <i class="fas fa-heart-square"></i>Liked Songs
+            </a>
           </li>
         </ul>
         <p></p>
@@ -40,9 +44,10 @@ const UserLeftBlock = () => {
         <p>My Playlist #1</p>
       </div>
       <div className="install">
-        <p><i class="fal fa-arrow-circle-down"></i>Install App</p>
+        <p>
+          <i class="fal fa-arrow-circle-down"></i>Install App
+        </p>
       </div>
-     
     </div>
   );
 };

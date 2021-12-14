@@ -7,8 +7,8 @@ export let AuthContextApi = createContext("");
 const AuthProvider = ({ children }) => {
   let [state, setState] = useState(null);
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user.emailVerified === true) {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user.emailVerified === true || user.reauthenticateWithPhoneNumber) {
         setState(user);
       } else {
         setState(null);
@@ -18,7 +18,8 @@ const AuthProvider = ({ children }) => {
 
   return (
     <AuthContextApi.Provider value={state}>
-      {state === null ? <Spinner /> : children}
+      {children}
+      {/* {state === null ? <Spinner /> : children} */}
     </AuthContextApi.Provider>
   );
 };

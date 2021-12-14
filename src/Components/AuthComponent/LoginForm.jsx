@@ -11,12 +11,12 @@ const LoginForm = ({ history }) => {
   });
 
   let { email, password, loading } = state;
-  let handleChange = (e) => {
+  let handleChange = e => {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
 
-  let handleSubmit = async (e) => {
+  let handleSubmit = async e => {
     e.preventDefault();
     try {
       // console.log(state);
@@ -29,9 +29,9 @@ const LoginForm = ({ history }) => {
       if (userData.user.emailVerified === true) {
         toast.success(`Succesfully ${email} has been loged in`);
         history.push("/");
-      }else{
-          history.push('./login')
-          toast.error(`email has not verified go to ${email} verify then login `)
+      } else {
+        history.push("./login");
+        toast.error(`email has not verified go to ${email} verify then login `);
       }
       //   history.push("/");
     } catch (error) {
@@ -68,6 +68,9 @@ const LoginForm = ({ history }) => {
             value={password}
             onChange={handleChange}
           />
+        </div>
+        <div>
+          <Link to="/password-reset">Forgot your password?</Link>
         </div>
 
         <div className="form-group">

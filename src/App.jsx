@@ -11,6 +11,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { AuthContextApi } from "./Apis/AuthContext";
 import UserHome from "./UsersComponent/UserHome";
+import Spinner from "./Pages/Spinner/Spinner";
+import ProtectedRoute from "./Helpers/ProtectedRoute";
+import PublicRoute from "./Helpers/PublicRoute";
+import PasswordReset from "./Components/AuthComponent/PasswordReset";
+import PhoneAuth from "./Components/AuthComponent/PhoneAuth";
+import CreatePlayList from "./Components/AudioComponent/CreatePlayList";
 
 const App = () => {
   let state = useContext(AuthContextApi);
@@ -19,37 +25,52 @@ const App = () => {
     <section id="SpotifyMainBlock">
       <article>
         <Router>
-          {/* {auth === true ? (
-            <header>
-              <Navbar />
-            </header>
-          ) : (
-            ""
-          )} */}
-          <header>{state ? <Navbar /> : ""}</header>
+          <header>
+            <Navbar />
+          </header>
           <ToastContainer />
           <main>
             {/* dynamic routing starts here */}
 
             <Switch>
-              <Route path="/" exact>
+              <PublicRoute path="/" exact>
                 <Home />
-              </Route>
+              </PublicRoute>
 
-              <Route path="/login">
+              <PublicRoute path="/login">
                 <Login />
-              </Route>
+              </PublicRoute>
 
-              <Route path="/signup">
+              <PublicRoute path="/signup">
                 <Signup />
-              </Route>
+              </PublicRoute>
 
-              {/* user routing satrt here */}
-              <Route path="/UserHome">
+              <PublicRoute path="/password-reset">
+                <PasswordReset />
+              </PublicRoute>
+
+              <PublicRoute path="/phone-auth">
+                <PhoneAuth />
+              </PublicRoute>
+
+              <ProtectedRoute path="/UserHome">
                 <UserHome />
-              </Route>
+              </ProtectedRoute>
 
-              <Route path="/">
+              {/* <ProtectedRoute path="/create-play-list">
+                <CreatePlayList />
+              </ProtectedRoute> */}
+
+              {/* user routing starts here */}
+              {/* {state === null ? (
+                <Spinner />
+              ) : (
+                <ProtectedRoute path="/UserHome">
+                  <UserHome />
+                </ProtectedRoute> 
+              )} */}
+
+              <Route path="*">
                 <PageNotFound />
               </Route>
             </Switch>
@@ -60,16 +81,6 @@ const App = () => {
       </article>
     </section>
   );
-  // };
-
-  // let IsAuthenticatedTemplate = () => {
-  //   return <UserHome />;
-  // };
-  // return (
-  //   <Fragment>
-  //     {state === null ? <IsAnonymousTemplate /> : <IsAuthenticatedTemplate />}
-  //   </Fragment>
-  // );
 };
 
 export default App;

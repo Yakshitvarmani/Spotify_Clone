@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-#userBlock article {
+#userBlock > article {
   display: flex;
   height: 100vh;
 }

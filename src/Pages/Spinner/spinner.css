@@ -1,7 +1,6 @@
-body {
-  background-color: #222;
-}
-
+/* body {
+  background-color: black;
+} */
 .spinner {
   position: absolute;
   left: 50%;
@@ -66,7 +65,8 @@ body {
 
 @-webkit-keyframes flash {
   0% {
-    background-color: rgba(255, 255, 255, 0.75);
+    /* background-color: rgba(255, 255, 255, 0.75); */
+    background-color: black;
   }
   50% {
     background-color: rgba(255, 255, 255, 0.1);
@@ -75,7 +75,8 @@ body {
 
 @keyframes flash {
   0% {
-    background-color: rgba(255, 255, 255, 0.75);
+    /* background-color: rgba(255, 255, 255, 0.75); */
+    background-color: black;
   }
   50% {
     background-color: rgba(255, 255, 255, 0.1);
