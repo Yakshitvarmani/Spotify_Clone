@@ -41,7 +41,11 @@ const Login = () => {
             <button onClick={() => handleClick(GoogleProvider)}>
               Continue with google
             </button>
-            <Link to="/phone-auth">Continue with Phone Number</Link>
+            <button>
+              <span>
+                <Link to="/phone-auth">Continue with Phone Number</Link>
+              </span>
+            </button>
           </div>
 
           <p className="orBlock">

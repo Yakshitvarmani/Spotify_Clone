@@ -9,9 +9,9 @@ const UserLeftBlock = () => {
       <div className="userli">
         <ul>
           <li>
-            <a href="">
+            <Link to="/userHome/music-home">
               <i class="fal fa-home-alt"></i>Home
-            </a>
+            </Link>
           </li>
           <li>
             <a href="">

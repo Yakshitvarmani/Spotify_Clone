@@ -43,3 +43,79 @@
   margin-top: 20px;
   border-bottom: 1px solid #99999999;
 }
+#musicHome article {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+#musicHome article > div.col-6 {
+  flex-basis: 20%;
+  margin: 5px;
+  border: 1px solid #4444;
+}
+#musicHome article > div.col-6 figure {
+  width: 100%;
+}
+#musicHome article > div.col-6 figure img {
+  width: 100%;
+  height: 200px;
+}
+.audioPlayer {
+  background: #111;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.audioPlayer img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  position: absolute;
+  top: -100px;
+  /* margin-right: -667px; */
+}
+._contentBlock audio {
+  width: 97%;
+  margin: 0 auto;
+  left: 24px;
+  position: relative;
+  filter: invert(1);
+  border: 2px solid #99999975;
+  border-radius: 5px;
+  padding: 10px;
+}
+._contentBlock header {
+  color: white;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 8px 24px;
+  text-transform: capitalize;
+}
+._contentBlock header h2 {
+  display: flex;
+  justify-content: flex-start;
+  flex-basis: 50%;
+}
+._contentBlock header p {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 50%;
+}
+._contentBlock header p img {
+  animation: rotation 9s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.font_size {
+  font-size: xx-large;
+}

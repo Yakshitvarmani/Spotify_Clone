@@ -6,17 +6,17 @@ import Home from "./Pages/Home";
 import Login from "./Components/AuthComponent/Login";
 import Signup from "./Components/AuthComponent/Signup";
 import PageNotFound from "./Pages/PageNotFound";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { AuthContextApi } from "./Apis/AuthContext";
 import UserHome from "./UsersComponent/UserHome";
-import Spinner from "./Pages/Spinner/Spinner";
+// import Spinner from "./Pages/Spinner/Spinner";
 import ProtectedRoute from "./Helpers/ProtectedRoute";
 import PublicRoute from "./Helpers/PublicRoute";
 import PasswordReset from "./Components/AuthComponent/PasswordReset";
 import PhoneAuth from "./Components/AuthComponent/PhoneAuth";
-import CreatePlayList from "./Components/AudioComponent/CreatePlayList";
+// import CreatePlayList from "./Components/AudioComponent/CreatePlayList";
 
 const App = () => {
   let state = useContext(AuthContextApi);

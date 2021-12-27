@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import "./Audio.css";
 import { toast } from "react-toastify";
 import firebase from "firebase";
+import { useHistory } from "react-router-dom";
 
 let genre = [
   "Blues",
@@ -16,6 +17,7 @@ let genre = [
   "Funk",
 ];
 const CreatePlayList = () => {
+  let history = useHistory();
   let [state, setState] = useState({
     title: "",
     artist: "",
@@ -70,6 +72,43 @@ const CreatePlayList = () => {
       toast.success("Successfully Uploaded");
       console.log(audio_storage);
       console.log(Mp3_storage);
+      Mp3_storage.on(
+        "state_changed",
+        snapShot => {
+          let progressBar =
+            (snapShot.bytesTransferred / snapShot.totalBytes) * 100;
+          setState({ loading: true, barStatus: true, progress: progressBar });
+        },
+        err => {
+          throw err;
+        },
+        async () => {
+          // completion of task
+          let DownloadPoster = await firebase
+            .storage()
+            .ref("music-poster")
+            .child(AUDIO_POSTER)
+            .getDownloadURL();
+          setPoster(DownloadPoster);
+          let DownloadMp3 = await firebase
+            .storage()
+            .ref("music-file")
+            .child(AUDIO_FILE)
+            .getDownloadURL();
+          setAudioFile(DownloadMp3);
+          firebase
+            .database()
+            .ref("audio_library")
+            .push({
+              ...state,
+              DownloadMp3,
+              DownloadPoster,
+            });
+          history.push("/userHome/profile");
+          toast.success("Successfully audio file is uploaded");
+        }
+      );
+      // let downloadPoster = await firebase.storage().ref("music-poster").child(audio_storage).getDownloadURL();
     } catch (error) {
       toast.error(error.message);
     }
